@@ -38,12 +38,12 @@ const Hero = () => {
                 </p>
               </div>
               <div className='flex flex-col p-4'>
-                <div className='text-left pb-4'>
+                <div className='md:text-left text-center pb-4'>
                   <h1 className=''>
-                  مشاهده اطلاعات خودرو با ثبت پلاک:
+                  مشاهده اطلاعات خودرو با ثبت پلاک :
                   </h1>
                 </div>
-                <div aria-hidden="true" className="flex rounded-lg drop-shadow-xl" dir='ltr'>
+                <div className="flex rounded-lg drop-shadow-xl" dir='ltr'>
                   <div className="iran-flag-place bg-gray-900 p-2 rounded-lg" >
                     <Image src="/images/iran-flag-dark.svg" width={20} height={35} alt="پرچم ایران"  />
                   </div>
@@ -51,7 +51,7 @@ const Hero = () => {
                     placeholder="--"
                     value={firstPart}
                     onChange={(e) => setFirstPart(e.target.value)}
-                    className="text-center bg-white w-[7%] text-2xl placeholder:text-black"
+                    className="text-center bg-white md:w-[15%] lg:w-[10%] xl:w-[8%] w-[15%] text-2xl placeholder:text-black"
                     maxLength={2}
                   />
                   <div aria-hidden="true" className="bg-white pb-1 flex items-center" >
@@ -59,19 +59,19 @@ const Hero = () => {
                       <rect width="16" height="16" fill="white"/>
                       <path d="M8.75338 10.5953C8.47339 10.9347 7.95333 10.9347 7.67334 10.5953L4.82794 7.1454C4.45137 6.68883 4.77613 6 5.36796 6H11.0588C11.6506 6 11.9753 6.68883 11.5988 7.1454L8.75338 10.5953Z" fill="#858585"/>
                     </svg>
-                    <span className="empty text-black text-xl" >_</span>
+                    <span className="text-black text-xl" >_</span>
                   </div>
                   <input type="tel"
                     placeholder="---"
                     value={thirdPart}
                     maxLength={3}
                     onChange={(e) => setThirdPart(e.target.value)}
-                    className="text-center bg-white w-[7%] text-xl placeholder:text-black"
+                    className="text-center bg-white md:w-[15%] lg:w-[10%] xl:w-[8%] w-[19%] text-xl placeholder:text-black"
                   />
                   <div className="bg-white py-2">
                     <Separator orientation="vertical" className='text-gray-500 bg-white mx-2'/>
                   </div>
-                  <div className="flex flex-col bg-white w-[7%] justify-center">
+                  <div className="flex flex-col bg-white md:w-[15%] lg:w-[10%] xl:w-[8%] w-[19%] justify-center">
                     <svg width="36" height="8" viewBox="0 0 36 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M36 0.5H34.5V7.5H36V0.5Z" fill="#CCCCCC"/>
                       <path d="M32.5 0.5H31V2.5H22V0.5H20.5V6H16V7.5H22V4H32.5V0.5Z" fill="#CCCCCC"/>
