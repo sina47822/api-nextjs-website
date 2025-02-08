@@ -1,5 +1,5 @@
 'use client';
-import CardHero from '@/components/Helper/CardHero';
+import CardHero from '@/components/Home/Hero/CardHero';
 import { Button } from '@/components/ui/button'
 import { Separator } from "@/components/ui/separator"
 import { CardMinHero } from '@/constant/cardminhero';
@@ -21,7 +21,7 @@ const Hero = () => {
     const [cityCode, setCityCode] = useState("");
 
   return (
-    <div className='relative mx-auto'>
+    <div className='relative mx-auto dark:bg-gray-900'>
       {/* content */}
       <div className='relative z-10 flex flex-col items-center justify-center'>
         <Image src="/images/Homepage-Mobile.webp" width={2000} height={300} alt={'Homepage'} className='md:hidden'/>
@@ -96,7 +96,9 @@ const Hero = () => {
               <ul className='flex items-center justify-center mt-6 gap-5 flex-wrap'>
               {CardMinHero.map((link)=>{
                 return (
-                  <CardHero id={link.id} url={link.url} label={link.label} buttontext={link.buttontext} underline={link.underline} />
+                  <li className='drop-shadow-lg'>
+                    <CardHero id={link.id} url={link.url} label={link.label} buttontext={link.buttontext} underline={link.underline} />
+                  </li>
                 )
               })}
               </ul>

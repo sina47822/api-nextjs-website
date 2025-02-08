@@ -10,28 +10,27 @@ type Props ={
   };
 const Services = ({id,url,label}: Props) => {
   return (
-    <div className='pt-16 pb-16'>
-        <div className='flex flex-col xl:w-[60%] lg:w-[70%] w-[95%] md:w-[80%] sm:w-[90%] mx-auto'>
-            <ul className='flex flex-col gap-10'>
+    <div className='pt-16 pb-16 dark:bg-gray-900'>
+        <div className='flex flex-col items-center'>
+            <ul className='gird grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 justify-center items-center'>
                 {ServicesCat.map((link) => {
                     return (
-                        <li>
-                            <Link key={link.id} href={link.url} className="">
-                                {link.label}
-                                <ul className='flex flex-wrap pb-10 pt-10 items-center justify-center gap-10'>
+                        <li key={link.id} className='flex flex-col'>
+                            <Link href={link.url} >{link.label}</Link> 
+                            <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-2 pb-10 pt-10 gap-5'>
                                 {link.card.map((cardlink) => {
                                     return (
-                                        <ServicesCard id={cardlink.id} label={cardlink.label} iconurl={cardlink.iconurl} url={cardlink.url}/>
+                                        <li className='border rounded-lg px-4 py-5 border-blue-300/40 dark:bg-violet-500 dark:hover:bg-violet-600 bg-sky-300 hover:bg-sky-200 '>
+                                            <ServicesCard id={cardlink.id} label={cardlink.label} iconurl={cardlink.iconurl} url={cardlink.url} underline={cardlink.underline}/>
+                                        </li>
                                     )
                                 })}
-                                </ul>
-                            </Link>
+                            </ul>
                         </li>
                     )
                 })}
             </ul>
         </div>
-      
     </div>
   )
 }
